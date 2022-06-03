@@ -2,16 +2,18 @@ package com.example.springbootwebapp2.model;
 
 public class Student {
 
+
     String name;
-    int rollNo;
+    int roll_no;
     String branch;
 
-    public Student() {
-    }
 
-    public Student(String name, int rollNo, String branch) {
+    public Student(){};// default construtor
+
+    public Student(String name, int roll_no, String branch) {
+
         this.name = name;
-        this.rollNo = rollNo;
+        this.roll_no = roll_no;
         this.branch = branch;
     }
 
@@ -23,12 +25,12 @@ public class Student {
         this.name = name;
     }
 
-    public int getRollNo() {
-        return rollNo;
+    public int getRoll_no() {
+        return roll_no;
     }
 
-    public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
+    public void setRoll_no(int roll_no) {
+        this.roll_no = roll_no;
     }
 
     public String getBranch() {

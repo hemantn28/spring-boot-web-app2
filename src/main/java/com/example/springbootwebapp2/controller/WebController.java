@@ -62,8 +62,25 @@ public class WebController {
         Student student=new Student("Rahul", 12, "CS");
         model.addAttribute("Student", student);
         return "hello";
+    }
 
+    @RequestMapping("/java_data")
+    public String dynamicData(Model model){
+        model.addAttribute("a","Java");
+        model.addAttribute("b","Java 8");
+        model.addAttribute("c","Spring & Spring boot");
+        return "java_data"; // returns java_data.jsp
 
+    }
+
+    @RequestMapping("/student_data")
+    public String studentInfo(Model model){
+        Student obj=new Student("Rashid",40,"PCB");
+        model.addAttribute("std1", obj);
+        Student obj1=new Student("Kalpesh",25,"Commerce");
+        model.addAttribute("std2", obj1);
+                
+        return "student_data";
 
     }
 
